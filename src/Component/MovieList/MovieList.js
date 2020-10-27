@@ -8,8 +8,6 @@ function MovieList({ list, filterText, filterRate }) {
     return (
 
       <div className="MovieList__style">
-        {console.log(x)}
-        {console.log(filterRate)}
         {list.filter(el => (el.title.toLowerCase().includes(filterText.toLowerCase())) || el.rate == filterRate)
           .map((el, i) => (<MovieCard key={i} movie={el} />
           ))}
@@ -19,8 +17,7 @@ function MovieList({ list, filterText, filterRate }) {
   }
   return (
     <div className="MovieList__style">
-      {console.log(x)}
-      {console.log(filterRate)}
+
       {x.filter(el => el.rate == filterRate)
         .map((el, i) => (<MovieCard key={i} movie={el} />
         ))}

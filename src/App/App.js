@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import AddMovie from './AddMovie'
-import MovieList from './Component/MovieList/MovieList'
-import Filter from "./Component/Filter/Filter"
+import AddMovie from '../Component/AddMovie/AddMovie'
+import MovieList from '../Component/MovieList/MovieList'
+import Filter from "../Component/Filter/Filter"
 
 function App({ ListOfMovie }) {
   const [FinalListMovie, setFinalListMovie] = useState(ListOfMovie);
@@ -23,7 +23,7 @@ function App({ ListOfMovie }) {
   //**end of the filter function that we will pass to the filter  */
   const [Rate, setRate] = useState(null);
   const handleRate = (rate) => {
-    console.log(rate);
+
     setRate(rate);
   }
 

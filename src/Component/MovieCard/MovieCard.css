@@ -22,8 +22,15 @@
   }
 
   .Avatar{
-      top:40px;
+     
       z-index: 10;
-      border:4px grey;
+   
       
+  }
+
+  .Link__Style:hover{
+       transform: scale(1.2);
+    transition:ease-in-out 0.2s;
+      filter:contrast(300%);
+     
   }

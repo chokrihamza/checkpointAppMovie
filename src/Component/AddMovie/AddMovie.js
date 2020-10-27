@@ -83,7 +83,7 @@ function AddMovie({ UpDateMovie }) {
                 <Form.Control type="number" max={5} min={0} placeholder="rate..." id="rate" onChange={handleChange} /><br />
                 {/**The Add Action Must to be here  */}
                 <Button variant="contained" color="primary" onClick={() => { UpDateMovie(newMovie); handleClose(); handleReset() }} >Add</Button>
-                {/**End of comment of AddButton */}
+                {/**End of comment  AddButton */}
                 <Button color="secondary" variant="contained" onClick={handleClose}>
                   Close
           </Button>

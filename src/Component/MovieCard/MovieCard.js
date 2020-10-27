@@ -6,16 +6,37 @@ import Typography from '@material-ui/core/Typography';
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
 import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+import Tooltip from '@material-ui/core/Tooltip';
 import './MovieCard.css';
 
-function MovieCard({ movie: { title, posteUrl, description, rate } }) {
+function MovieCard({ movie: { title, posteUrl, description, rate, Trailer } }) {
 
 
   return (
 
     < Card className="Card__Style" >
+      <Button className="Link__Style" style={{ marginLeft: 'auto', marginRight: 'auto', display: 'block' }}>
+        <Link to={{
+          pathname: `/Trailer/${title}`,
+          state: {
+            TrailerTitle: title,
+            TrailerposteUrl: posteUrl,
+            TrailerDescrition: description,
+            TrailerRate: rate,
+            Trailer: Trailer
 
-      <Avatar className="Avatar" alt={title} src={posteUrl} />
+
+          }
+        }}>
+          <Tooltip title="Go To The Movie Trailer" aria-label="add" className="Add">
+            <Avatar className="Avatar" alt={title} src={posteUrl} />
+          </Tooltip>
+        </Link>
+
+      </Button>
+
       <CardMedia
 
         component="img"

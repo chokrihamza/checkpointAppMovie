@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import { ListOfMovie } from './inputs'
+import Router from './Router/Router'
 
-ReactDOM.render(<App ListOfMovie={ListOfMovie} />,
+
+ReactDOM.render(<Router />,
 
   document.getElementById('root')
 );
